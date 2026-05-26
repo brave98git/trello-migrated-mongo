@@ -9,9 +9,16 @@ const { issueRouter } = require("./routes/issue.routes");
 
 app.use(express.json());
 
+//Authentication
 app.use(authRouter);
+
+//Organization
 app.use(organizationRouter);
+
+//Board
 app.use(boardRouter);
+
+//Issues
 app.use(issueRouter);
 
 app.listen(PORT, () => {
